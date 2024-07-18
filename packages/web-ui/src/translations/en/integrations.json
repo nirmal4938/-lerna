@@ -1,0 +1,115 @@
+{
+  "steps": {
+    "makeHttpRequest": {
+      "title": "Make HTTP Request"
+    },
+    "jmesPath": {
+      "title": "JMES Path",
+      "form": {
+        "path": "Path"
+      }
+    },
+    "jsonPath": {
+      "title": "JSON Path"
+    },
+    "omitKeys": {
+      "title": "Remove Keys From Object",
+      "form": {
+        "keys": "Keys"
+      }
+    },
+    "objectToArray": {
+      "title": "Object to Array",
+      "form": {
+        "key": "Key to flatten to",
+        "flat": "Flatten? If no, store the attribute value in the \"value\" key",
+        "parse": "JSON-parse the attribute value before flattening?"
+      }
+    },
+    "arrayMap": {
+      "title": "Array Map",
+      "form": {
+        "fn": "Function"
+      }
+    },
+    "attachTaskFiles": {
+      "title": "Attach Files to Task"
+    },
+    "markTaskComplete": {
+      "title": "Mark Task as Complete"
+    },
+    "condition": {
+      "title": "Conditional",
+      "form": {
+        "conditions": "Conditions",
+        "hasTrueSteps": "Has True Steps",
+        "hasFalseSteps": "Has False Steps"
+      }
+    },
+    "update_request": {
+      "title": "Update Request",
+      "form": {
+        "newData": "New Data",
+        "immediate": "Commit immediately"
+      }
+    }
+  },
+  "impl": {
+    "custom": {
+      "form": {
+        "content_types": {
+          "title": "Content Type",
+          "options": {
+            "json": "JSON"
+          }
+        },
+        "auth": {
+          "title": "Authentication",
+          "options": {
+            "http_basic": "HTTP Basic",
+            "api_key": "API Key",
+            "oauth2": "OAuth 2",
+            "header": "Header"
+          }
+        },
+        "verbs": {
+          "options": {
+            "head": "HEAD",
+            "get": "GET",
+            "post": "POST",
+            "put": "PUT",
+            "patch": "PATCH",
+            "delete": "DELETE"
+          }
+        },
+        "request_validation": {
+          "title": "Request Validation",
+          "options": {
+            "none": "None",
+            "hmac5": "HMAC5"
+          },
+          "header": "Header",
+          "secret": "Secret",
+          "hash_template": "Hash Template"
+        },
+        "oauth": {
+          "token_endpoint": "Token Endpoint",
+          "client_id": "Client ID",
+          "client_secret": "Client Secret",
+          "audience": "Audience",
+          "grant_type": "Grant Type"
+        },
+        "username": "Username",
+        "password": "Password",
+        "api_key": "API Key",
+        "header_name": "Header Name",
+        "header_value": "Header Value",
+        "url": {
+          "title": "URL",
+          "placeholder": "https://api.yourdomain.com"
+        },
+        "payload_required": "Payload Required"
+      }
+    }
+  }
+}

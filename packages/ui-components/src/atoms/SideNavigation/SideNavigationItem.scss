@@ -1,0 +1,39 @@
+@import "../../theme/DefaultTheme.scss";
+
+.nav-item {
+  padding: 0;
+  margin: 0;
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.1s ease-in-out;
+  color: white;
+  height: 60px;
+  background-color: $CTA_COLOR;
+
+  &.active {
+    background-color: $SIDE_BAR_ITEM_HOVER;
+  }
+
+  &:hover {
+    background-color: $SIDE_BAR_ITEM_HOVER;
+  }
+
+  &.disabled {
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &.is-sub-item {
+    padding-right: 32px;
+  }
+
+  &-content {
+    margin-left: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    user-select: none;
+  }
+}

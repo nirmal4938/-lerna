@@ -1,0 +1,883 @@
+{
+  "title": "Assets",
+  "title_discovered": "Newly Discovered",
+  "title_assets_and_vendors": "Assets",
+  "title_connectors": "Connectors",
+  "title_processing_activities": "Processing Activities",
+  "title_processing_activity_details": "Processing Activity Details",
+  "title_services": "Services",
+  "title_service_details": "Service Details",
+  "workflow_title": "Add New Asset",
+  "workflow_title_processing_activity": "Add New Processing Activity",
+  "workflow_title_service": "Add New Service",
+  "existing_systems": "Existing Assets",
+  "edit_system_title": "Asset Details",
+  "existing_systems_count": "{{ count }} active asset",
+  "existing_systems_count_plural": "{{ count }} active assets",
+  "new_systems_count": "{{ count }} new asset",
+  "new_systems_count_plural": "{{ count }} new assets",
+  "detected_systems": "Detected Assets",
+  "detected": "Detected",
+  "other": "Other",
+  "no_results": "Sorry, no results are found. Please retry your search query.",
+  "my_data_sources": "My Assets",
+  "my_processing_activities": "My Processing Activities",
+  "my_processing_activities_service": "My Services",
+  "information": "Information",
+  "legacy_or_custom": "Proprietary or Custom",
+  "ready_for_approval": "Ready for Review",
+  "mark_as_active": "Complete Review",
+  "count_selected": "{{ count }} selected",
+  "create_system": "Create Asset",
+  "create_processing_activity": "Create Processing Activity",
+  "create_service": "Create Service",
+  "n_subsidiaries": "{{ count }} Subsidiary",
+  "n_subsidiaries_plural": "{{ count }} Subsidiaries",
+  "found_in_asset": "Found in {{ name }}",
+  "found_in_n_assets": "Found in {{ count }} asset",
+  "found_in_n_assets_plural": "Found in {{ count }} assets",
+  "delete_confirmation": "Are you sure you want to delete this asset?",
+  "delete_confirmation_pa": "Are you sure you want to delete this processing activity?",
+  "delete_confirmation_pa_service": "Are you sure you want to delete this service?",
+  "select_from_the_left_checkover": "Select options from the left to complete data map.",
+  "select_from_the_left_checkover_disabled": "There are no options selected.",
+  "choose_entity": "Choose Entity",
+  "entity_editor": "Custom Entity Editor",
+  "request_review": "Request Review",
+  "request_review_bulk": "Request Reviews",
+  "request_review_confirmation": "Are you sure you want to request review for multiple assets?",
+  "complete_review": "Complete Review",
+  "apply_owner": "Apply Owner",
+  "apply_processing_activity": "Apply Processing Activity",
+  "apply_security_measure": "Apply Security Measure",
+  "bulk_action_system_complete": "Successfully applied to {{ count }} system",
+  "bulk_action_system_complete_plural": "Successfully applied to {{ count }} systems",
+  "bulk_action_pa_complete": "Successfully applied to {{ count }} processing activity",
+  "bulk_action_pa_complete_plural": "Successfully applied to {{ count }} processing activities",
+  "column_duplicate_card": "Duplicate cards are not allowed in the same column",
+  "update_template": "Update Template",
+  "import_success": "Imported successfully",
+  "tooltips": {
+    "contacts": "Add contacts to {{ name }}, so team members can help populate the record and perform reviews.",
+    "relationship": "In relation to personal data processed by {{ name }}, what are they considered to {{ company_name }}",
+    "security_measures": "Add technical and organizational security measures for {{ name }}",
+    "data_residency": "Add the location of the data center for {{ name }} and what the platform is.",
+    "personal_data_categories": "Add the personal data that is collected by {{ name }}",
+    "processing_activities": "Add the use cases and business processing activities around personal data collected by {{ name }}",
+    "do_not_sell": "Under CCPA, do you sell data that you collect with {{ name }}?",
+    "purposes_of_processing": "What are the specific purposes of processing data for {{ name }}?",
+    "processing_countries": "What countries does {{ name }} process personal data within?",
+    "cross_border_transfers": "What are the transfer mechanisms that support {{ name }}",
+    "assets": "What are the assets that process personal data for {{ name }}",
+    "personal_data_categories_pa": "Add the personal data that is collected by {{ name }} and it's connected assets.",
+    "source_of_personal_data": "What is the source of the personal data collected by {{ name }}?",
+    "destination_of_personal_data": "What is the destination of the personal data collected by {{ name }}?",
+    "lawful_basis": "What is the lawful basis for processing personal data in relation to {{ name }}?",
+    "data_subject": "Select the types of data subjects that {{ name }} processes data for.",
+    "save_asset_first": "This user will be created & invited when the asset gets saved.",
+    "save_asset_first_pa": "This user will be created & invited when the processing activity gets saved.",
+    "save_asset_first_fault": "Please save or discard changes before editing this contact."
+  },
+  "vendor": {
+    "connect_asset_to_template": "Pick a Template for {{ name }}",
+    "select_fields_to_update_description": "Select the fields you wish to copy from the template to your asset. This action can be performed any time.",
+    "select_fields_to_update_description_none": "There are no differences between your asset and the template.",
+    "select_all": "Select All",
+    "deselect_all": "Deselect All",
+    "field": "Field",
+    "current": "Current Value in {{ name }}",
+    "template": "Value from {{ name }}'s template",
+    "associate_and_save": "Merge and Save",
+    "acknowledge_and_dismiss": "Acknowledge and Dismiss",
+    "copy_new_values": "Copy Values from Template"
+  },
+  "tabs": {
+    "details": "Details",
+    "description": "Description",
+    "documents": "Documents",
+    "personal-data": "Personal Data",
+    "data-processing": "Processing Activities",
+    "data-related": "Related",
+    "data-processing-service": "Services",
+    "consent": "Consent",
+    "related": "Related",
+    "subtasks": "Subtasks",
+    "connector": "Connector",
+    "data-subject-requests": "Connector",
+    "history": "History",
+    "audit-log": "Audit Log",
+    "data-model": "Data Model",
+    "pipelines": "Pipelines",
+    "fields": "Fields",
+    "settings": "Settings"
+  },
+  "storage_formats": {
+    "backup-tapes": "Backup Tapes",
+    "cloud-storage": "Cloud Storage",
+    "data-store": "Data Store",
+    "ftp-server": "FTP Server",
+    "file-cabinet": "File Cabinet",
+    "file-warehouse": "File Warehouse",
+    "portable-media": "Portable Media",
+    "shared-drive": "Shared Drive",
+    "web-server": "Web Server"
+  },
+  "system_types": {
+    "application": "Application",
+    "database": "Database",
+    "physical-storage": "Physical Storage",
+    "vendor": "Vendor",
+    "website": "Website"
+  },
+  "likelihood": {
+    "title": "Likelihood of Personal Data",
+    "if-configured": "If Configured",
+    "unlikely": "Unlikely",
+    "likely": "Likely",
+    "very-likely": "Very Likely"
+  },
+  "filter": {
+    "all_sources": "All sources",
+    "n_sources": "{{ count }} source",
+    "n_sources_plural": "{{ count }} sources",
+    "all_functions": "All functions",
+    "all_statuses": "All statuses",
+    "all_subsidiaries": "All subsidiaries",
+    "n_subsidiaries": "{{ count }} Subsidiary",
+    "n_subsidiaries_plural": "{{ count }} Subsidiaries",
+    "n_statuses": "{{ count }} status",
+    "n_statuses_plural": "{{ count }} statuses",
+    "n_functions": "{{ count }} function",
+    "n_functions_plural": "{{ count }} functions"
+  },
+  "table": {
+    "subsidiary": "Subsidiary",
+    "subsidiaries": "Subsidiaries",
+    "system": "Asset Name",
+    "owners": "Owner(s)",
+    "count": "Count",
+    "personal_data": "Personal Data",
+    "detected": "Detected",
+    "source": "Source",
+    "function": "Function",
+    "processing_activity": "Processing Activity",
+    "service": "Service",
+    "status": "Status",
+    "functions": "Function(s)",
+    "last_updated": "Last Updated",
+    "no_contacts": "No Owners added. <0>Add an Owner</0>.",
+    "no_assets": "No Assets added. <0>Add an Asset</0>.",
+    "no_assets_unauthorized": "No Assets added.",
+    "no_assets_related": "No Assets related. <0>Relate an Asset</0>.",
+    "no_assets_related_unauthorized": "No Assets related.",
+    "no_filtered_assets": "No Assets found matching your criteria. Please try your search again",
+    "no_processing_activities": "No Processing Activities added. <0>Add a Processing Activity</0>.",
+    "no_processing_activities_unauthorized": "No Processing Activities added.",
+    "no_processing_activities_unauthorized_service": "No Services added.",
+    "no_processing_activities_service": "No Services added. <0>Add a Service</0>.",
+    "no_processing_activities_related": "No Processing Activities related. <0>Relate a Processing Activity</0>.",
+    "no_processing_activities_related_unauthorized": "No Processing Activities related.",
+    "no_processing_activities_related_unauthorized_service": "No Services related.",
+    "no_processing_activities_related_service": "No Services related. <0>Relate a Service</0>.",
+    "no_filtered_processing_activities": "No Processing Activities found matching your criteria. Please try your search again",
+    "no_filtered_processing_activities_service": "No Services found matching your criteria. Please try your search again",
+    "merge_with_template": "Merge with template",
+    "check_template": "Check template differences",
+    "changes_detected": "Changes detected, click to resolve",
+    "approved_at": "Last Reviewed"
+  },
+  "functions": {
+    "legal": "Legal",
+    "engineering": "Engineering",
+    "marketing": "Marketing",
+    "sales": "Sales",
+    "finance": "Finance",
+    "operations": "Operations",
+    "human-resources": "Human Resources",
+    "it": "IT"
+  },
+  "assets": {
+    "assets": "Assets",
+    "add_assets": "Add Assets",
+    "relate_assets": "Relate Assets",
+    "no_assets_found": "No Assets found",
+    "data-categories": "Data Categories"
+  },
+  "hosting": {
+    "on-premise": "On Premise",
+    "cloud": "Cloud",
+    "hybrid": "Hybrid",
+    "private-cloud": "Private Cloud"
+  },
+  "workflow": {
+    "not_found_invite": "No user found. Invite \"{{ search }}\"?",
+    "details": "Details",
+    "details_desc": "Enter details about the asset",
+    "details_choose_template": "Choose an asset",
+    "owners_and_contacts": "Owners",
+    "owners_and_contacts_desc": "Invite the asset owner of {{ name }}",
+    "processing_activity": "Processing Activity",
+    "processing_activity_desc": "Describe the processing activities for {{ name }}",
+    "processing_activity_desc_service": "Describe the services for {{ name }}",
+    "processing_activity_required": "Please select processing activities",
+    "processing_activity_required_service": "Please select services",
+    "connector": "Connector",
+    "connector_desc": "Connector configuration for {{ name }}",
+    "connector_sub_desc": "This is used for request automation. You can set this up at any time.",
+    "skip_and_save": "Skip & Save",
+    "individuals": "Individuals",
+    "individuals_desc": "Data Subjects",
+    "individuals_relationship": "In relation to {{ company_name }}, {{ system_name }} processes data for:",
+    "gather_data": "Gather Data",
+    "approval": "Review",
+    "confirm_ownership": {
+      "self": {
+        "title": "I am the owner",
+        "desc": "I can help provide the data map and integration requirements for this asset.",
+        "desc_pa": "I can help provide the data map and integration requirements for this processing activity.",
+        "desc_pa_service": "I can help provide the data map and integration requirements for this service."
+      },
+      "other": {
+        "title": "Someone else is the owner",
+        "desc": "Another individual in my organization will provide the data map and integration requirements for this asset.",
+        "desc_pa": "Another individual in my organization will provide the data map and integration requirements for this processing activity.",
+        "desc_pa_service": "Another individual in my organization will provide the data map and integration requirements for this service."
+      }
+    }
+  },
+  "connectors": {
+    "tabs": {
+      "configured": "Configured",
+      "available": "Available"
+    },
+    "suggest_a_vendor": "Suggest a Vendor",
+    "dont_see_a_vendor_listed": "Don't see a vendor listed?",
+    "dont_see_a_vendor_listed_desc": "Click here to recommend an integration. We will respond within 24 hours."
+  },
+  "connector_workflow": {
+    "information": "Connector Information",
+    "workflow_config": "Endpoint Configuration",
+    "data_fields": "Data Field Configuration",
+    "steps": {
+      "details": {
+        "title": "Details",
+        "authentication": {
+          "mechanisms": {
+            "none": "None",
+            "http_basic": "HTTP Basic",
+            "api_key": "API Key",
+            "oauth2": "OAuth2",
+            "header": "Header Value"
+          }
+        },
+        "encodings": {
+          "none": "None",
+          "base64": "Base64",
+          "md4": "MD4",
+          "md5": "MD5",
+          "sha256": "SHA256",
+          "sha512": "SHA512"
+        },
+        "labels": {
+          "connector_name": "Connector Name",
+          "connector_information": "Connector Information",
+          "protocol": "Protocol",
+          "authentication": "Authentication",
+          "allow_download": "Allow Download Requests",
+          "allow_delete": "Allow Deletion Requests",
+          "username": "Username",
+          "password": "Password",
+          "client_id": "Client ID",
+          "client_secret": "Client Secret",
+          "token_endpoint": "Token Endpoint",
+          "audience": "Audience",
+          "grant_type": "Grant Type",
+          "authentication_encoding": "Authentication Encoding",
+          "api_key": "API Key",
+          "header_name": "Header Name",
+          "header_value": "Header Value",
+          "wait_until_start": "Skip data lookup after request created",
+          "notify_request_creation": "Send incoming requests to this resource"
+        }
+      },
+      "endpoints": {
+        "title": "Endpoints",
+        "labels": {
+          "asynchronous": "Asynchronous",
+          "asynchronous_url": "Endpoint URL",
+          "download_url": "Download URL",
+          "download_requires_payload": "Requires Payload?",
+          "delete_url": "Delete URL",
+          "update_url": "Update URL",
+          "create_request_url": "Create URL",
+          "body_format": "Request Body Format",
+          "request_id": "The numeric id of the submitted request.",
+          "email": "The email address submitted by the user.",
+          "randomUUID": "Generates a random UUID",
+          "first_name": "The first name of the requester",
+          "last_name": "The last name of the requester",
+          "is_delete_request": "Whether the request is a delete request",
+          "is_download_request": "Whether the request is a download request",
+          "type": "The request type being submitted (e.g. 'delete', 'download', etc)",
+          "payload_validation": "Payload Validation",
+          "payload_validation_header": "Payload Validation Header",
+          "payload_validation_secret": "Payload Validation Secret",
+          "payload_validation_template": "Payload Validation Template",
+          "payload_validation_template_empty": "Payload Validation Template (No Body)"
+        },
+        "payload_validation": {
+          "none": "None",
+          "hmac5": "HMAC5"
+        }
+      },
+      "fields": {
+        "title": "Field Configuration",
+        "labels": {
+          "pick_sample": "Input an e-mail to pull in sample data",
+          "none_found": "No sample found for {{ email }}",
+          "network_error": "Unable to reach your custom integration endpoint. Please verify your settings."
+        },
+        "headers": {
+          "identifier": "Identifier",
+          "download": "Download",
+          "delete": "Delete"
+        },
+        "prompt": "Please select a data sample to continue..."
+      },
+      "delete": {
+        "title": "Test Delete",
+        "info": "(Optional) Enter a record identifier to test the delete workflow. This will physically delete the record.",
+        "test_deletion": "Test Deletion"
+      },
+      "finish": {
+        "description": "Success! Your connector is ready!"
+      }
+    }
+  },
+  "pa": {
+    "workflow": {
+      "owners_and_contacts_desc": "Invite the processing activity owner of {{ name }}",
+      "owners_and_contacts_desc_service": "Invite the service owner of {{ name }}",
+      "details_desc": "Details about the processing activity",
+      "details_desc_service": "Details about the service",
+      "name": "Name",
+      "functions": "Functions",
+      "please_assign_an_owner": "Please assign an owner",
+      "email_format_matcher": "Please enter a valid email",
+      "assets": "Assets",
+      "assets_desc": "Select the assets for {{ name }} activity"
+    },
+    "tabs": {
+      "details": "Details",
+      "assets": "Assets",
+      "lawful-basis": "Lawful Basis",
+      "dpia": "DPIA",
+      "audit-log": "Audit Log",
+      "lineage": "Lineage"
+    },
+    "lawful_basis_description": "In relation to the processing activity above, processing this data has the following legal basis:",
+    "lawful_basis_description_service": "In relation to the service above, processing this data has the following legal basis:",
+    "lawful_basis": {
+      "Consent": "Consent",
+      "Compliance with a legal obligation": "Compliance with a legal obligation",
+      "Performance of a contract": "Performance of a contract",
+      "Performance of a task carried out in the public interest": "Performance of a task carried out in the public interest",
+      "Legitimate interests": "Legitimate interests",
+      "Protect the vital interests of individuals": "Protect the vital interests of individuals",
+      "Purpose of scientific investigation": "Purpose of scientific investigation",
+      "Principle of human life preservation": "Principle of human life preservation"
+    },
+    "information": "Information",
+    "active": "Active",
+    "inactive": "Inactive",
+    "add_processing_activities": "Add Processing Activities",
+    "add_processing_activities_services": "Add Services",
+    "relate_processing_activities": "Relate Processing Activities",
+    "relate_processing_activities_services": "Relate Services",
+    "no_pa_found": "No Processing Activity found",
+    "no_pa_found_service": "No Service found"
+  },
+  "categories_of_individuals": {
+    "customers": "Customers",
+    "prospective_customers": "Prospective Customers",
+    "employees_and_representatives": "Employees and Representatives",
+    "applicants": "Applicants",
+    "other": "Other",
+    "customers_assigned": "Assets assigned to Customers",
+    "prospective_customers_assigned": "Assets assigned to Prospective Customers",
+    "employees_and_representatives_assigned": "Assets assigned to Employees and Representatives",
+    "applicants_assigned": "Assets assigned to Applicants",
+    "other_assigned": "Assets assigned to Other"
+  },
+  "relationship": {
+    "title": "Relationship",
+    "desc": "In relation to {{ organization_name }}, {{ system_name }} should be described as a",
+    "gdpr": {
+      "subtitle": "GDPR",
+      "controller": "Controller",
+      "processor": "Processor",
+      "joint-controller": "Joint Controller",
+      "sub-processor": "Sub-Processor",
+      "other": "Other"
+    },
+    "ccpa": {
+      "subtitle": "CCPA",
+      "business": "Business",
+      "service-provider": "Service Provider",
+      "service-provider-subcontractor": "Service Provider Subcontractor",
+      "third-party": "Third Party",
+      "other": "Other"
+    }
+  },
+  "processing_countries": "Processing Countries",
+  "contacts": {
+    "title": "Owners",
+    "description": "Enter owners of the asset who maintain and process data for {{ name }}",
+    "name": "Name",
+    "contact_type": "Contact Type",
+    "email": "Email",
+    "phone": "Phone",
+    "owner": "Owner",
+    "add_contact": "Add Owner"
+  },
+  "form": {
+    "business_functions": "Functions",
+    "hosting_types": "Asset Type",
+    "hosting_providers": "Hosting Providers",
+    "hosting_countries": "Hosting Country",
+    "hosting_locations": "Hosting Location",
+    "technical_security_measures": "Technical Security Measures",
+    "organizational_security_measures": "Organizational Security Measures",
+    "personal_data_categories": "Personal Data Categories",
+    "storage_format": "Storage Format",
+    "storage_formats": "Storage Formats",
+    "gdpr_relationship": "GDPR Relationship",
+    "ccpa_relationship": "CCPA Relationship",
+    "ccpa_dns": "CCPA Do Not Sell",
+    "name": "Asset Name",
+    "details": "Details",
+    "system_type": "Asset Type",
+    "internal_or_third_party": "Internal or External",
+    "additional_notes": "Notes",
+    "type": "Internal or External",
+    "logo": "Logo",
+    "function": "Function",
+    "send_invite": "Assign to User",
+    "convert_to_user": "Convert to User",
+    "types": {
+      "internal": "Internal",
+      "external": "External (3rd Party)"
+    },
+    "save_and_review": "Save and Review",
+    "select_existing_user": "Select an existing user",
+    "contact_type": "Contact Type",
+    "create_a_custom_contact": "Create a Custom Owner",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "owner": "Owner",
+    "user_is_owner_of_data": "User is the owner of the data",
+    "add_user": "Add User",
+    "update_user": "Update User",
+    "add_custom_contact": "Add Custom Owner",
+    "update_custom_contact": "Update Owner",
+    "edit_contact": "Edit Owner",
+    "add_contact": "Add Owner",
+    "save_contact": "Save Owner",
+    "status": "Status",
+    "processing_activity": "Processing Activity",
+    "approved_by": "Reviewed By",
+    "date_added": "Date Added",
+    "last_updated": "Last Updated",
+    "not_applicable": "N/A",
+    "pending_approval": "Pending Approval",
+    "description": "Description",
+    "category": "Category",
+    "privacy_notices": "Privacy Notices",
+    "agreements": "Agreements",
+    "certificates": "Certificates",
+    "user_invited": "{{ name }} has been invited!",
+    "processing_activity_saved": "Processing Activity has been saved.",
+    "service_saved": "Service has been saved.",
+    "phone_format": "(111) 111-1111"
+  },
+  "dpia": {
+    "title": "DPIA",
+    "dpia_completed": "DPIA Completed",
+    "reason": "Reason",
+    "date": "Date",
+    "link_to_dpia": "Link to DPIA"
+  },
+  "security_measures": {
+    "title": "Security Measures",
+    "technical_security_measures": "Technical Security Measures",
+    "organizational_security_measures": "Organizational Security Measures"
+  },
+  "data_retention": {
+    "title": "Data Retention & Disposal Policy",
+    "period": "Retention Period",
+    "policy": "Retention Policy",
+    "disposal": "Data Disposal"
+  },
+  "data_hosting": {
+    "title": "Data Residency",
+    "provider": "Hosting Provider",
+    "location": "Hosting Type",
+    "countries": "Hosting Countries"
+  },
+  "purposes_of_processing": {
+    "title": "Purpose of Processing Activities",
+    "pa_title": "Purposes of Processing",
+    "descriptor": "Choose purposes of processing",
+    "description": "{{ count }} selected",
+    "buttonText": "Add Custom Purpose",
+    "error": "Purpose of Processing Activity is required.",
+    "add": "Add Purposes of Processing"
+  },
+  "data_subject_consents": {
+    "title": "Data Subject Consent",
+    "descriptor": "Choose consent methods",
+    "description": "{{ count }} consent method",
+    "description_plural": "{{ count }} consent methods",
+    "buttonText": "Add Custom Consent Method",
+    "error": "Data Subject Consent is required."
+  },
+  "data_subject_categories": {
+    "title": "Data Subject Categories",
+    "descriptor": "Choose data subject categories",
+    "description": "{{ count }} category",
+    "description_plural": "{{ count }} categories",
+    "buttonText": "Add Custom Data Subject",
+    "error": "Data Subject Categories are required."
+  },
+  "personal_data_categories": {
+    "title": "Personal Data Categories",
+    "descriptor": "Choose personal data categories",
+    "description": "{{ count }} category",
+    "description_plural": "{{ count }} categories",
+    "buttonText": "Add Custom Category",
+    "error": "Personal Data Categories are required."
+  },
+  "origins_of_personal_data": {
+    "title": "Source of Personal Data",
+    "descriptor": "Choose sources of personal data",
+    "description": "{{ count }} source",
+    "description_plural": "{{ count }} sources",
+    "buttonText": "Add Custom Source",
+    "error": "Source of Personal Data is required."
+  },
+  "destinations_of_personal_data": {
+    "title": "Destination of Personal Data",
+    "descriptor": "Choose destinations of personal data",
+    "description": "{{ count }} destination",
+    "description_plural": "{{ count }} destinations",
+    "buttonText": "Add Custom Destination",
+    "error": "Destination of Personal Data is required."
+  },
+  "cross_border_transfers": {
+    "title": "Cross-Border Transfer",
+    "descriptor": "Choose transfer mechanisms",
+    "description": "{{ count }} selected",
+    "buttonText": "Add Transfer Mechanism",
+    "error": "Cross border transfer mechanisms are reauired."
+  },
+  "lawful_bases": {
+    "title": "Lawful Bases",
+    "descriptor": "Choose lawful bases",
+    "description": "{{ count }} selected",
+    "buttonText": "Add Lawful Basis"
+  },
+  "errors": {
+    "email_already_a_contact": "Email already an owner",
+    "email_is_required": "Email is required to convert a custom owner to a user.",
+    "no_access": "You do not have permission to view this asset's details.",
+    "no_access_pa": "You do not have permission to view this processing activities' details.",
+    "no_access_pa_service": "You do not have permission to view this service's details.",
+    "personal_data_categories_required": "Personal Data Categories are required.",
+    "user_is_already_contact": "This user is already an owner for {{ system }}",
+    "can_not_delete_all_contacts": "You must always have one owner assigned to this system.",
+    "system_not_approved": "This system needs to be approved before it can be enabled.",
+    "system_name_taken": "There is already an asset named \"{{ name }}\". Would you like to use \"{{ suggestion }}\"?",
+    "processing_activity_taken": "There is already a processing activity named \"{{ name }}\". Would you like to use \"{{ suggestion }}\"?",
+    "processing_activity_taken_service": "There is already a service named \"{{ name }}\". Would you like to use \"{{ suggestion }}\"?",
+    "use_suggestion": "Use \"{{ suggestion }}\"",
+    "unique violation": "Email is already in use"
+  },
+  "dsr": {
+    "add_connector": "Add Connector",
+    "update_connector": "Update Connector",
+    "save_first": "Please save or discard your changes to the system before configuring the Asset connector properties.",
+    "automation_type": {
+      "owner": "Assign to owner(s)",
+      "owner_description": "When a request is submitted, subtask is assigned to an employee",
+      "integration": "Use data connector",
+      "integration_description": "When a request is submitted, subtask is automated via the integration"
+    }
+  },
+  "Account Management": "Account Management",
+  "Active Directory Service": "Active Directory Service",
+  "Contract Submission": "Contract Submission",
+  "Customer Provisioning": "Customer Provisioning",
+  "HR Recruiting": "HR Recruiting",
+  "Lead Generation": "Lead Generation",
+  "Internal Communication": "Internal Communication",
+  "Marketing CRM": "Marketing CRM",
+  "Mobile Device Management": "Mobile Device Management",
+  "Events and Tradeshows": "Events and Tradeshows",
+  "Online Advertising": "Online Advertising",
+  "Video Security Review": "Video Security Review",
+  "SaaS Product Procurement": "SaaS Product Procurement",
+  "CCPA Do Not Sell": "CCPA: Do Not Sell",
+  "create_processing_activity_inline": {
+    "title": "Create Processing Activity",
+    "name": "Name",
+    "functions": "Functions",
+    "create": "Create"
+  },
+  "status": {
+    "new": "New",
+    "waiting-review": "Awaiting Review",
+    "waiting-approval": "Awaiting Approval",
+    "ready": "Ready"
+  },
+  "status_column": {
+    "new": "New",
+    "new-service": "Review",
+    "new-filter": "New",
+    "waiting-review": "Review",
+    "waiting-review-filter": "Review",
+    "waiting-approval": "Pending",
+    "waiting-approval-filter": "Pending",
+    "ready": "{{ state }}",
+    "ready-filter": "Active",
+    "active-filter": "Active",
+    "inactive-filter": "Inactive",
+    "active-inactive": "Active / Inactive"
+  },
+  "processing_activity_status": {
+    "new": "New",
+    "waiting-review": "Awaiting Review",
+    "waiting-approval": "Awaiting Approval",
+    "ready": "Ready"
+  },
+  "audit": {
+    "asset_created": "{{ name }} was created",
+    "asset_template_values_copied": "{{ name }} inherited asset templates from Privacy Request",
+    "field": "{{field}}: {{old}} > {{new}}",
+    "contact_added": "Owner '{{ email }}' added",
+    "contact_updated": "Updated owner information",
+    "contact_removed": "Owner '{{ email }}' removed",
+    "service": {
+      "created": "Service \"{{ name }}\" created",
+      "updated": "Service \"{{ name }}\" updated",
+      "approved": "User approved the service"
+    },
+    "processing_activity": {
+      "created": "Processing activity \"{{ name }}\" created",
+      "updated": "Processing activity \"{{ name }}\" updated",
+      "assigned": "Assigned to asset \"{{ name }}\"",
+      "approved": "User approved the processing activity",
+      "relation": {
+        "added": {
+          "cross_border_transfer": "Cross-border transfer mechanism '{{ name }}' added",
+          "purpose_of_processing": "Purpose of processing '{{ name }}' added",
+          "contact": "Owner '{{ email }}' added",
+          "data_disposal_method": "Data disposal method '{{ name }}' added",
+          "system_relations": "Asset '{{ name }}' added",
+          "origin_of_personal_data": "Origin of personal data '{{ name }}' added",
+          "personal_data_category": "Personal data category '{{ name }}' added",
+          "storage_format": "Storage format '{{ name }}' added",
+          "hosting_type": "Asset type '{{ name }}' added",
+          "hosting_location": "Hosting location '{{ name }}' added",
+          "country": "Processing country '{{ name }}' added",
+          "hosting_provider": "Hosting provider '{{ name }}' added",
+          "organizational_security_measure": "Organizational security measure '{{ name }}' added",
+          "technical_security_measure": "Technical security measure '{{ name }}' added",
+          "lawful_basis": "Lawful basis '{{ name }}' added",
+          "subject_category": "Data subject category '{{ name }}' added",
+          "destination_of_personal_data": "Destination of personal data '{{ name }}' added",
+          "business_function": "Business function '{{ name }}' added"
+        },
+        "removed": {
+          "cross_border_transfer": "Cross-border transfer mechanism '{{ name }}' removed",
+          "purpose_of_processing": "Purpose of processing '{{ name }}' removed",
+          "contact": "Owner '{{ email }}' removed",
+          "data_disposal_method": "Data disposal method '{{ name }}' removed",
+          "system_relations": "Asset '{{ name }}' removed",
+          "origin_of_personal_data": "Origin of personal data '{{ name }}' removed",
+          "personal_data_category": "Personal data category '{{ name }}' removed",
+          "storage_format": "Storage format '{{ name }}' removed",
+          "hosting_type": "Asset type '{{ name }}' removed",
+          "hosting_location": "Hosting location '{{ name }}' removed",
+          "country": "Processing country '{{ name }}' removed",
+          "hosting_provider": "Hosting provider '{{ name }}' removed",
+          "organizational_security_measure": "Organizational security measure '{{ name }}' removed",
+          "technical_security_measure": "Technical security measure '{{ name }}' removed",
+          "lawful_basis": "Lawful basis '{{ name }}' removed",
+          "subject_category": "Data subject category '{{ name }}' removed",
+          "destination_of_personal_data": "Destination of personal data '{{ name }}' removed",
+          "business_function": "Business function '{{ name }}' removed"
+        }
+      },
+      "status_change": {
+        "new": {
+          "waiting-review": "User completed initial processing activity setup.",
+          "waiting-approval": "User marked processing activity as Ready for Approval",
+          "ready": "User setup processing activity."
+        },
+        "waiting-review": {
+          "new": "User pushed back processing activity to new.",
+          "waiting-approval": "User marked processing activity as Ready for Approval.",
+          "ready": "User completed processing activity review."
+        },
+        "waiting-approval": {
+          "new": "User pushed back processing activity to new.",
+          "waiting-review": "User rejected approval",
+          "ready": "User approved processing activity."
+        },
+        "ready": {
+          "new": "User pushed back processing activity to new.",
+          "waiting-review": "User requested review of processing activity.",
+          "waiting-approval": "User requested re-approval of processing activity."
+        }
+      },
+      "field": {
+        "name": "Name changed from '{{ old }}' to '{{ new }}'",
+        "description": "Description changed from '{{ old }}' to '{{ new }}'",
+        "processing_countries": "Processing Countries changed from '{{ old }}' to '{{ new }}'",
+        "dpia_completed": "DPIA Completed changed from '{{ old }}' to '{{ new }}'",
+        "dpia_reason": "DPIA Reason changed from '{{ old }}' to '{{ new }}'",
+        "dpia_reason_date": "DPIA Reason Date changed from '{{ old }}' to '{{ new }}'",
+        "dpia_completed_at": "DPIA Completed At changed from '{{ old }}' to '{{ new }}'",
+        "functions": "Functions changed from '{{ old }}' to '{{ new }}'",
+        "lawful_basis": "Lawful Basis changed from '{{ old }}' to '{{ new }}'",
+        "retention_policy": "Retention Policy changed from '{{ old }}' to '{{ new }}'",
+        "is_active": "Processing Activity's status changed from '{{ old }}' to '{{ new }}'",
+        "data_retention_period": "Data Retention Period changed from '{{ old }}' to '{{ new }}'"
+      }
+    },
+    "system": {
+      "created": "System \"{{ name }}\" created",
+      "updated": "{{ count }} field updated",
+      "updated_plural": "{{ count }} fields updated",
+      "approved": "User approved the asset",
+      "template_copied": "Asset was synchronized with template.",
+      "relation": {
+        "added": {
+          "processing_activity": "Processing activity '{{ name }}' added",
+          "service": "Service '{{ name }}' added",
+          "cross_border_transfer": "Cross-border transfer mechanism '{{ name }}' added",
+          "purpose_of_processing": "Purpose of processing '{{ name }}' added",
+          "contact": "Owner '{{ email }}' added",
+          "data_disposal_method": "Data disposal method '{{ name }}' added",
+          "system_relations": "Asset '{{ name }}' added",
+          "origin_of_personal_data": "Origin of personal data '{{ name }}' added",
+          "personal_data_category": "Personal data category '{{ name }}' added",
+          "storage_format": "Storage format '{{ name }}' added",
+          "hosting_type": "Asset type '{{ name }}' added",
+          "hosting_location": "Hosting location '{{ name }}' added",
+          "country": "Hosting country '{{ name }}' added",
+          "hosting_provider": "Hosting provider '{{ name }}' added",
+          "organizational_security_measure": "Organizational security measure '{{ name }}' added",
+          "technical_security_measure": "Technical security measure '{{ name }}' added",
+          "lawful_basis": "Lawful basis '{{ name }}' added",
+          "subject_category": "Data subject category '{{ name }}' added",
+          "destination_of_personal_data": "Destination of personal data '{{ name }}' added",
+          "business_function": "Business function '{{ name }}' added"
+        },
+        "removed": {
+          "processing_activity": "Processing activity '{{ name }}' removed",
+          "service": "Service '{{ name }}' removed",
+          "cross_border_transfer": "Cross-border transfer mechanism '{{ name }}' removed",
+          "purpose_of_processing": "Purpose of processing '{{ name }}' removed",
+          "contact": "Owner '{{ email }}' removed",
+          "data_disposal_method": "Data disposal method '{{ name }}' removed",
+          "system_relations": "Asset '{{ name }}' removed",
+          "origin_of_personal_data": "Origin of personal data '{{ name }}' removed",
+          "personal_data_category": "Personal data category '{{ name }}' removed",
+          "storage_format": "Storage format '{{ name }}' removed",
+          "hosting_type": "Asset type '{{ name }}' removed",
+          "hosting_location": "Hosting location '{{ name }}' removed",
+          "country": "Hosting country '{{ name }}' removed",
+          "hosting_provider": "Hosting provider '{{ name }}' removed",
+          "organizational_security_measure": "Organizational security measure '{{ name }}' removed",
+          "technical_security_measure": "Technical security measure '{{ name }}' removed",
+          "lawful_basis": "Lawful basis '{{ name }}' removed",
+          "subject_category": "Data subject category '{{ name }}' removed",
+          "destination_of_personal_data": "Destination of personal data '{{ name }}' removed",
+          "business_function": "Business function '{{ name }}' removed"
+        }
+      },
+      "status_change": {
+        "new": {
+          "waiting-review": "User completed initial asset setup.",
+          "waiting-approval": "User marked asset as Ready for Approval",
+          "ready": "User setup asset."
+        },
+        "waiting-review": {
+          "new": "User pushed back asset to new.",
+          "waiting-approval": "User marked asset as Ready for Approval.",
+          "ready": "User completed asset review."
+        },
+        "waiting-approval": {
+          "new": "User pushed back asset to new.",
+          "waiting-review": "User rejected approval",
+          "ready": "User approved asset."
+        },
+        "ready": {
+          "new": "User pushed back asset to new.",
+          "waiting-review": "User requested review of asset.",
+          "waiting-approval": "User requested re-approval of asset."
+        }
+      },
+      "connector_updated": "User updated the Download/Delete request connector",
+      "field": {
+        "name": "Name changed from '{{ old }}' to '{{ new }}'",
+        "type": "Type changed from '{{ old }}' to '{{ new }}'",
+        "functions": "Functions changed from '{{ old }}' to '{{ new }}'",
+        "host_type": "Host Type changed from '{{ old }}' to '{{ new }}'",
+        "detected_at": "Detected At changed from '{{ old }}' to '{{ new }}'",
+        "dpia_completed": "DPIA Completed changed from '{{ old }}' to '{{ new }}'",
+        "storage_format": "Storage Format changed from '{{ old }}' to '{{ new }}'",
+        "data_subject_consent_documented": "Consent Documented changed from '{{ old }}' to '{{ new }}'",
+        "category_other": "Other Personal Data changed from '{{ old }}' to '{{ new }}'",
+        "category_customers": "Customer Personal Data changed from '{{ old }}' to '{{ new }}'",
+        "category_applicants": "Applicant Personal Data changed from '{{ old }}' to '{{ new }}'",
+        "category_prospective_customers": "Prospective Customer Personal Data changed from '{{ old }}' to '{{ new }}'",
+        "category_employees_and_representatives": "Employee and Representative Personal Data changed from '{{ old }}' to '{{ new }}'",
+        "ccpa_dns": "CCPA Do Not Sell changed from '{{ old }}' to '{{ new }}'",
+        "notes": "Notes changed from '{{ old }}' to '{{ new }}'",
+        "agreements": "Agreements changed from '{{ old }}' to '{{ new }}'",
+        "certificates": "Certificates changed from '{{ old }}' to '{{ new }}'",
+        "hosting_country": "Hosting Country changed from '{{ old }}' to '{{ new }}'",
+        "privacy_notices": "Privacy Notices changed from '{{ old }}' to '{{ new }}'",
+        "hosting_location": "Hosting Location changed from '{{ old }}' to '{{ new }}'",
+        "ccpa_relationship": "CCPA Relationship changed from '{{ old }}' to '{{ new }}'",
+        "gdpr_relationship": "GDPR Relationship changed from '{{ old }}' to '{{ new }}'",
+        "is_active": "Asset's status changed from '{{ old }}' to '{{ new }}'"
+      }
+    }
+  },
+  "import": {
+    "relate_to_entity": "Relate to entity...",
+    "tabs" : {
+      "personal_data_category": "Personal Data Category",
+      "storage_format": "Storage Format",
+      "hosting_type": "Hosting Type",
+      "hosting_location": "Hosting Location",
+      "hosting_provider": "Hosting Provider",
+      "organizational_security_measure": "Organizational Security Measure",
+      "technical_security_measure": "Technical Security Measure",
+      "subject_category": "Subject Category",
+      "cross_border_transfer": "Cross Border Transfer",
+      "data_disposal_method": "Data Disposal Method",
+      "purpose_of_processing": "Purpose of Processing",
+      "origin_of_personal_data": "Origin of Personal Data",
+      "country": "Country",
+      "lawful_basis": "Lawful Basis",
+      "destination_of_personal_data": "Destination of Personal Data",
+      "business_function": "Business Function"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Users",
+  "create_employee": "Create User",
+  "table": {
+    "email": "Email",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "role": "Role"
+  },
+  "create_modify": {
+    "force_request_sent": "User has been sent a password reset link.",
+    "force_request_failed_to_send": "Failed to send password reset link."
+  }
+}

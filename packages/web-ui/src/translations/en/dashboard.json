@@ -1,0 +1,51 @@
+{
+  "title": "Dashboard",
+  "discovered": "Newly Discovered",
+  "data_sources": "Asset",
+  "processing_activities": "Processing Activities",
+  "data_categories": "Data Categories",
+  "data_sources_pending_approval": "Assets Pending Approval",
+  "data_sources_pending_approval_none": "No assets pending approval",
+  "processing_activities_pending_approval_none": "No processing activities pending approval",
+  "data_sources_discovered": "Newly Discovered",
+  "data_sources_discovered_none": "No assets discovered",
+  "data_sources_by_status": "Assets by Status",
+  "processing_activities_by_status": "Processing Activities by Status",
+  "review": "Review",
+  "detected": "Detected",
+  "assets": "Assets",
+  "processing_activities_in_review": "Processing Activities Pending Approval",
+  "assets_in_review": "Assets Pending Approval",
+  "time": {
+    "today": "Today",
+    "this_month": "This Month",
+    "this_quarter": "This Quarter",
+    "this_year": "This Year",
+    "last_year": "Last Year"
+  },
+  "status": {
+    "new": "New",
+    "waiting-review": "Review",
+    "waiting-approval": "Pending Approval",
+    "ready": "Active"
+  },
+  "download_requests": "Download Requests",
+  "deletion_requests": "Deletion Requests",
+  "opt_out_requests": "Opt-out Requests",
+  "completed_requests": "Completed Requests",
+  "avg_time_to_resolve": "Average Time to Resolve",
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
+  }
+}

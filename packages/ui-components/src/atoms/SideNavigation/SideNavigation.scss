@@ -1,0 +1,113 @@
+@import "../../theme/DefaultTheme.scss";
+
+.sidebar {
+  background-color: $CTA_COLOR;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  height: 100vh;
+  justify-content: space-between;
+  width: 196px;
+
+  &.collapsed {
+    width: 60px;
+  }
+
+  &-items {
+    width: 100%;
+    flex: 1;
+    overflow-x: auto;
+    position: relative;
+    padding-bottom: 0;
+
+    &.scrolled {
+      padding-bottom: 32px;
+    }
+
+    &.collapsed {
+      & > div > div:nth-child(2) {
+        display: none;
+      }
+
+      & > div > div:nth-child(1) {
+        margin-left: 14px;
+      }
+    }
+  }
+
+  &-title-area {
+    user-select: none;
+    cursor: default;
+    color: white;
+    height: 80px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $SIDE_BAR_ITEM_HOVER;
+    box-sizing: border-box;
+  }
+
+  &-title-text {
+    font-family: Arial, sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    margin-left: 40px;
+
+    &.collapsed {
+      margin-left: 17px;
+    }
+  }
+
+  &-scroll-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: box-shadow 0.12s linear;
+    pointer-events: none;
+
+    &.up {
+      box-shadow: inset 0 5px 5px -5px rgb(0 0 0 / 30%);
+    }
+
+    &.down {
+      box-shadow: inset 0 -5px 5px -5px rgb(0 0 0 / 30%);
+    }
+
+    &.up.down {
+      box-shadow: inset 0 5px 5px -5px rgb(0 0 0 / 30%), inset 0 -5px 5px -5px rgb(0 0 0 / 30%);
+    }
+  }
+
+  &-scroll-down-indicator-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  &-footer {
+    border-top: 1px solid $SIDE_BAR_ITEM_HOVER;
+    width: "196px";
+
+    &.collapsed {
+      & > div > div:nth-child(2) {
+        display: none;
+      }
+
+      & > div > div:nth-child(1) {
+        margin-left: 14px;
+      }
+    }
+  }
+}

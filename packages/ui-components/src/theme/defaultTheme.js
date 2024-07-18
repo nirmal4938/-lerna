@@ -1,0 +1,27 @@
+import { DefaultTheme } from 'styled-components';
+
+export const defaultTheme = {
+  CTA_COLOR: '#1F6187',
+  CTA_COLOR_LIGHT: '#1f618785',
+  CTA_COLOR_HOVER: '#1A5475',
+  CTA_COLOR_ALERT: '#ff8400',
+  CTA_COLOR_ALERT_HOVER: '#e67802',
+  ERROR_COLOR: 'rgba(255,0,0,0.5)',
+  BLACK: '#454543',
+  WHITE: '#ffffff',
+  WHITE_HOVER: '#fdfcfc',
+  LIGHT_GREY: '#d0d0d0',
+  GREY: '#e1e0e0',
+  GREY_DISABLED: '#ececec',
+  BG_GREY: '#f6f6f6',
+  BG_GREY_HOVER: '#dedede',
+  BTN_HOVER: '#1A5475',
+  SIDE_BAR_ITEM_HOVER: '#1A5475',
+  DARKISH_GREEN: '#1A5475',
+  YELLOW: '#fffb44',
+  CTA_WARN: '#D4AC27',
+  CTA_WARN_HOVER: '#E3C564',
+  CTA_ERROR: '#D43B27',
+  CTA_SUCCESS: '#387192',
+  CTA_GREEN: '#4caf50',
+};

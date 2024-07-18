@@ -1,0 +1,24 @@
+{
+  "title": "Reports",
+  "titles": {
+    "data-residency": "Data Residency Map",
+    "cross-border-transfers": "Cross-Border Transfers Map"
+  },
+  "table": {
+    "name": "Report Name",
+    "format": "Format",
+    "filters": "Filters"
+  },
+  "errors": {
+    "general": "There was an error downloading this report"
+  },
+  "map": "Map",
+  "reports": {
+    "ropa": "ICO Records of Processing",
+    "subprocessors": "Sub-Processors List",
+    "data_residency": "Data Residency",
+    "cbt": "Cross-Border Transfers",
+    "ccpa_metrics_report": "CCPA Metrics",
+    "data_inventory": "Data Inventory"
+  }
+}
