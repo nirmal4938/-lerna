@@ -23,7 +23,15 @@ const Positioner = styled.div``;
 Positioner.displayName = 'Positioner';
 
 const SideNavigationItemComponent = ({
-  children, registerRef, active, icon, disabled, isSubItem, collapsed, className, ...props
+  children,
+  registerRef,
+  active,
+  icon,
+  disabled,
+  isSubItem,
+  collapsed,
+  className,
+  ...props
 }) => (
   <div
     className={clsx('nav-item', className, {
@@ -35,11 +43,9 @@ const SideNavigationItemComponent = ({
     ref={registerRef}
     {...props}
   >
-    <Icon>{ icon }</Icon>
+    <Icon>{icon}</Icon>
     {(!collapsed || isSubItem) && (
-      <div className="nav-item-content">
-        { children }
-      </div>
+      <div className="nav-item-content">{children}</div>
     )}
   </div>
 );
@@ -61,7 +67,7 @@ export const SideNavigationItem = compose(
   getContext({
     collapsed: PropTypes.bool.isRequired,
     getElement: PropTypes.func.isRequired,
-  }),
+  })
 )(SideNavigationItemComponent);
 
 // export default SideNavigationItem;

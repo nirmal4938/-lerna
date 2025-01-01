@@ -10,7 +10,7 @@ export * from './CloseButton';
 // export * from './DangerButton';
 // export * from './Divider';
 // export * from './DivTable';
-// export * from './DropdownComponent';
+export * from './DropdownComponent';
 // export * from './ErrorBoundary';
 // export * from './ErrorMessage';
 export * from './Field';
@@ -21,8 +21,8 @@ export * from './FloatingBox';
 export * from './Grid';
 export * from './Input';
 // export * from './InputGroup';
-// export * from './Label';
-// export * from './Loading';
+export * from './Label';
+export * from './Loading';
 // export * from './List';
 // export * from './media';
 // export * from './Paragraph';
@@ -43,3 +43,6 @@ export * from './TitleBar';
 
 export * from './icons';
 export * from './styles';
+export * from './List';
+export * from './ToggleComponent'
+

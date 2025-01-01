@@ -1,10 +1,10 @@
 // export * from './ButtonDropdown';
 // export * from './Caret';
-// export * from './CheckBox';
-// export * from './Dropdown';
+export * from './CheckBox';
+export * from './Dropdown';
 // export * from './Modal';
 export * from './NoAuthorizationTemplate';
-// export * from './Pagination';
+export * from './Pagination';
 // export * from './Radio';
 // export * from './RadioGroup';
 export * from './SearchAndSelect';
@@ -13,3 +13,4 @@ export * from './SearchAndSelect';
 // export * from './Toggle';
 export * from './Tooltip';
 export * from './LetterAvatar';
+export * from './Toggle';

@@ -1,1 +1,2 @@
-export { default } from './ComponentBar';
+export * from './ComponentBar';
+export * from './ComponentBarItem';

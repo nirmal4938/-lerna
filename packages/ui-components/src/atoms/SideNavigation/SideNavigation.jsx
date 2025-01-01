@@ -8,11 +8,72 @@ import { Logo } from '../icons/Logo';
 import { CaretDownIcon } from '../icons/CaretDownIcon';
 import './SideNavigation.scss';
 
-const ScrollDownIndicator = ({ visible, ...props }) => (
-  <div className={clsx('sidebar-scroll-down-indicator-container', { visible })} {...props}>
+const SideBarItems = styled.div`
+  width: 100%;
+  flex: 1;
+  overflow-x: auto;
+  position: relative;
+
+  padding-bottom: ${(props) => (props.hasScroll ? '32px' : '0')};
+
+  ${(props) =>
+    props.collapsed
+      ? `
+    & > div > div:nth-child(2) {
+      display: none;
+    }
+    & > div > div:nth-child(1) {
+      margin-left: 14px;
+    }
+  `
+      : ''}
+`;
+// Function to evaluate scroll indicators
+const evaluateScrollIndicators = ({ hasUp, hasDown }) => {
+  const top = `inset 0 5px 5px -5px rgba(0,0,0,${hasUp ? '0.3' : '0'})`;
+  const bottom = `inset 0 -5px 5px -5px rgba(0,0,0,${hasDown ? '0.3' : '0'})`;
+  return [top, bottom].join(',');
+};
+
+// Styled component for sidebar scroll indicator
+const SideBarItemsScrollIndicator = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  box-shadow: ${(props) => evaluateScrollIndicators(props)};
+  transition: box-shadow 0.12s linear;
+
+  pointer-events: none;
+`;
+
+// Styled component for scroll down indicator container
+const ScrollDownIndicatorContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: ${(props) => (props.visible ? '1' : '0')};
+  transition: opacity 0.25s linear;
+`;
+
+ScrollDownIndicatorContainer.displayName = 'ScrollDownIndicatorContainer';
+
+// Scroll down indicator component
+const ScrollDownIndicator = (props) => (
+  <ScrollDownIndicatorContainer {...props}>
     <CaretDownIcon color="rgba(255,255,255,0.8)" />
-  </div>
+  </ScrollDownIndicatorContainer>
 );
+
+SideBarItemsScrollIndicator.displayName = 'SideBarItemsScrollIndicator';
 
 const LogoContainer = styled.div`
   position: relative;
@@ -72,11 +133,13 @@ export class SideNavigation extends React.Component {
 
   investigate = () => {
     requestAnimationFrame(() => {
+      console.log('this.container', this.container);
       if (!this.container) {
         return;
       }
 
       const { clientHeight, scrollHeight, scrollTop } = this.container;
+      // console.log({ clientHeight, scrollHeight, scrollTop });
 
       const newState = {};
 
@@ -85,7 +148,7 @@ export class SideNavigation extends React.Component {
       const hasScroll = clientHeight !== scrollHeight;
 
       if (clientHeight !== scrollHeight) {
-        if ((clientHeight + scrollTop) !== scrollHeight) {
+        if (clientHeight + scrollTop !== scrollHeight) {
           hasDown = true;
         }
       }
@@ -113,8 +176,8 @@ export class SideNavigation extends React.Component {
 
   render() {
     const { title, children, footer, collapsed } = this.props;
-    const { hasUp: up, hasDown: down, hasScroll: scrolled, first } = this.state;
-
+    // const { hasUp: up, hasDown: down, hasScroll: scrolled, first } = this.state;
+    const { hasUp, hasDown, hasScroll, first } = this.state;
     return (
       <div className={clsx('sidebar', { collapsed })}>
         {title && (
@@ -125,21 +188,33 @@ export class SideNavigation extends React.Component {
           </div>
         )}
         {children && (
-          <div style={{ position: 'relative', display: 'flex', flex: 1, overflowY: 'auto' }}>
-            {/* <Scrollbar
-              style={{ width: '100%', height: '100%' }}
+          <div
+            style={{
+              position: 'relative',
+              display: 'flex',
+              flex: 1,
+              overflowY: 'auto',
+            }}
+          >
+            <SideBarItems
+              hasScroll={hasScroll}
+              collapsed={collapsed}
               ref={(r) => (this.container = r)}
-              className="react-scrollbar-custom"
-            > */}
-              <div className={clsx('sidebar-items', { scrolled, collapsed })}>{children}</div>
-            {/* </Scrollbar> */}
-            <div className={clsx('sidebar-scroll-indicator', { up, down })}>
-              <ScrollDownIndicator visible={down && first} />
-            </div>
+            >
+              {children}
+            </SideBarItems>
+            <SideBarItemsScrollIndicator hasUp={hasUp} hasDown={hasDown}>
+              <ScrollDownIndicator visible={hasDown && first} />
+            </SideBarItemsScrollIndicator>
           </div>
         )}
-        {footer && <div className={clsx('sidebar-footer', { collapsed })}>{footer}</div>}
-        <SideFloatingBox collapsed={collapsed} ref={(r) => (this.portalElement = r)} />
+        {footer && (
+          <div className={clsx('sidebar-footer', { collapsed })}>{footer}</div>
+        )}
+        <SideFloatingBox
+          collapsed={collapsed}
+          ref={(r) => (this.portalElement = r)}
+        />
       </div>
     );
   }
@@ -156,4 +231,3 @@ SideNavigation.childContextTypes = {
   collapsed: PropTypes.bool,
   getElement: PropTypes.func,
 };
-

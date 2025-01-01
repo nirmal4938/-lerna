@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ComponentBar = styled.div`
+export const ComponentBar = styled.div`
   height: 80px;
   box-sizing: border-box;
   width: 100%;
@@ -10,4 +10,3 @@ const ComponentBar = styled.div`
 
 ComponentBar.displayName = 'ComponentBar';
 
-export default ComponentBar;

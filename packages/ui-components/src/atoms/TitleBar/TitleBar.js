@@ -4,10 +4,11 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from '../Button';
-import ComponentBar from '../ComponentBar';
-import Grid from '../Grid';
+import { ComponentBar } from '../ComponentBar';
+// import Grid from '../Grid';
 import { BackArrow } from '../icons/BackArrow';
-import {Title} from '../Title';
+import { Title } from '../Title';
+import { Grid } from '../Grid';
 
 const BackButton = styled(Button)`
   width: 80px;

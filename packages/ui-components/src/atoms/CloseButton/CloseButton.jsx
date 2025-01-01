@@ -22,6 +22,7 @@ const CloseButtonContainer = styled.div`
   }
 `;
 
+
 const CloseButton = (props) => (
   <CloseButtonContainer {...props}>
     <CloseIcon />

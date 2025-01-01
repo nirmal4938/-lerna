@@ -13,6 +13,8 @@ import requests_en from './en/requests.json';
 import settings_en from './en/settings.json';
 import systems_en from './en/systems.json';
 import users_en from './en/users.json';
+import devices_en from './en/devices.json';
+
 
 // todo lazy load with loadable modules
 
@@ -31,6 +33,7 @@ i18next.init({
       requests: requests_en,
       users: users_en,
       reports: reports_en,
+      devices: devices_en,
     },
     'en-CA': {
       settings: settings_en_ca,

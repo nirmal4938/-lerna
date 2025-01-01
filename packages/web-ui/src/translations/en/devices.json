@@ -1,0 +1,15 @@
+{
+  "title": "Devices",
+  "create_employee": "Create Device",
+  "table": {
+    "device_id": "Device ID",
+    "device_type": "Device Type",
+    "last_maintenance": "Last Maintenance",
+    "location": "Location",
+    "reading": "Reading"
+  },
+  "create_modify": {
+    "force_request_sent": "User has been sent a password reset link.",
+    "force_request_failed_to_send": "Failed to send password reset link."
+  }
+}
