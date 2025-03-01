@@ -1,6 +1,7 @@
 export const validateDocumentNode = (GraphQLQuery) => {
     const definition = GraphQLQuery.definitions[0];
-    console.log("GraphQLQuery.definitions", GraphQLQuery.definitions)
+    console.log("definition", definition);
+
     // Ensure the query has the correct structure
     if (definition.kind !== 'OperationDefinition') {
         throw new Error('Invalid GraphQL Pager Query passed to useQueryPager()');
@@ -14,7 +15,7 @@ export const validateDocumentNode = (GraphQLQuery) => {
     }
 
     const params = [];
-    // console.log("definition", definition);
+
     // Check if the query has variable definitions
     if (!definition.variableDefinitions) {
         throw new Error('Your pager query has no variables defined.');
@@ -22,12 +23,11 @@ export const validateDocumentNode = (GraphQLQuery) => {
 
     // Iterate over each variable definition and handle types
     for (const variable of definition.variableDefinitions) {
-        console.log("variable", variable)
         const varName = variable.variable.name.value;
         const varType = variable.type;
 
-        // Handle NonNullType and NamedType
-        if (varType.kind === 'NamedType' /*&& varType.type.kind === 'NamedType'*/) {
+        // Handle NamedType (e.g., String, Int, Object)
+        if (varType.kind === 'NamedType') {
             const typeName = varType.name.value;
             if (typeName === 'Int') {
                 params.push({
@@ -61,8 +61,18 @@ export const validateDocumentNode = (GraphQLQuery) => {
                 console.error(`Unhandled ListType: ${listTypeName}`);
             }
         }
-        // Add more cases as necessary based on the types you're using
-        else {
+        // Handle NonNullType + NamedType (for simple non-nullable types)
+        else if (varType.kind === 'NonNullType' && varType.type.kind === 'NamedType') {
+            const typeName = varType.type.name.value;
+            if (['Int', 'String', 'Object'].includes(typeName)) {
+                params.push({
+                    type: typeName.toLowerCase(),
+                    key: varName,
+                });
+            } else {
+                console.error(`Unhandled NonNull NamedType: ${typeName}`);
+            }
+        } else {
             console.error(`Unhandled variable type: ${varType.kind}`);
         }
     }

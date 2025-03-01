@@ -23,15 +23,20 @@ import { Avatar } from '../../components/Avatar';
 import { MainContent } from '../../components/MainContent';
 import { Scrollbar } from 'react-scrollbars-custom';
 import QuickSwitcher from '../../components/QuickSwitcher/QuickSwitcher';
-import { Routes, Route, Link, useLocation, redirect } from 'react-router-dom';
+import { Routes, Route, Link, useLocation, redirect, useNavigate } from 'react-router-dom';
 import { DashboardIcon } from '../../components/icons/DashboardIcon';
 import { DashboardView } from '../DashboardView/DashboardView';
 import DeviceHistoriesView from '../DeviceHistoriesView/DeviceHistoriesView';
+import QuestionsView from '../QuestionsView/QuestionsView';
+import { useSelector } from 'react-redux';
 // import { DeviceHistoriesView } from '../DeviceHistoriesView/DeviceHistoriesView';
-
+import MatchView from '../UtilsPage/MatchView';
 const render = (props) => () => <TitleBar {...props} />;
 export const MainView = () => {
+  const navigate = useNavigate()
   const collapsed = false;
+  const initializing = useSelector(s => s.auth.initializing);
+  const authorized = useSelector(s => s.auth.authorized);
   const [t] = useTranslation('common');
   const { onLogout, me, loading, error } = useAuth();
   const { goBack } = useRouting();
@@ -41,6 +46,7 @@ export const MainView = () => {
     return true;
   };
 
+
   const routes = useMemo(() => {
     const _routes = [
       {
@@ -48,6 +54,24 @@ export const MainView = () => {
         icon: <DashboardIcon />,
         title: 'dashboard',
         element: <DashboardView />,
+      },
+      {
+        link: '/utility',
+        icon: <DashboardIcon />,
+        title: 'utility',
+        element: <MatchView />,
+        subroutes: [
+          {
+            link: '/utility/scorer',
+            title: 'Scorer',
+          },
+        ]
+      },
+      {
+        link: '/create-question',
+        icon: <DashboardIcon />,
+        title: 'questions',
+        element: <QuestionsView />,
       },
       {
         link: '/devicehistories',
@@ -100,6 +124,11 @@ export const MainView = () => {
     ];
     return _routes;
   }, []);
+
+  if (!initializing && !authorized) {
+   const search = new URLSearchParams(location.search);
+   navigate('/login')
+  }
   return (
     <React.Fragment>
       <AppBackground>
@@ -160,7 +189,7 @@ export const MainView = () => {
           </SideNavigation>
 
           <MainContent collapsed={collapsed}>
-            <Scrollbar
+            {/* <Scrollbar
               elementRef={(ref) => ref}
               style={{
                 width: '100%',
@@ -169,7 +198,7 @@ export const MainView = () => {
               removeTracksWhenNotUsed
               minimalThumbSize={30}
               scrollDetectionThreshold={100}
-            >
+            > */}
               <Routes>
                 {routes.map((route) => {
                   const props = {};
@@ -214,7 +243,7 @@ export const MainView = () => {
                 })}
                 {/* <Route path="/" render={() => redirect("/dashboard")} /> */}
               </Routes>
-            </Scrollbar>
+            {/* </Scrollbar> */}
             <QuickSwitcher routes={routes} />
           </MainContent>
         </TooltipProvider>

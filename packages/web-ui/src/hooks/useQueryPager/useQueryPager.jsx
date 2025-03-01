@@ -1,4 +1,4 @@
-import { useLazyQuery, useQuery } from '@apollo/react-hooks';
+import { useLazyQuery, useQuery } from '@apollo/client';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { useRouting } from '../useRouting'; // Make sure to adjust paths according to your project structure
@@ -105,7 +105,7 @@ export const useQueryPager = function (GraphQLQuery, options = {}) {
   }, []);
 
   const { key, params } = validateDocumentNode(GraphQLQuery);
-
+  console.log(' key, params',  key, params)
   const query = { limit, offset: Math.round((page - 1) * limit) };
   //   console.log('params', params, key);
   for (const param of params) {
@@ -136,18 +136,20 @@ export const useQueryPager = function (GraphQLQuery, options = {}) {
   const variables = { ...options.variables, ...query };
   const variableRef = useRef(variables);
   variableRef.current = variables;
-  console.log('variables', variables);
+  console.log('variables', variables, GraphQLQuery);
   const { data, loading, error, refetch } = useQuery(GraphQLQuery, {
     variables,
     fetchPolicy,
     pollInterval,
     skip: options.skip,
+    errorPolicy: 'all',
+    onError: (err) => console.log("err", err)
   });
-  console.log('data useQueryResult', variables, data);
+  // console.log('data useQueryResult', variables, data);
 
-  const [getIDs, { data: IDs }] = useLazyQuery(options.getIDQuery, {
-    fetchPolicy: 'network-only',
-  });
+  // const [getIDs, { data: IDs }] = useLazyQuery(options.getIDQuery, {
+  //   fetchPolicy: 'network-only',
+  // });
 
   const [results, count] = useMemo(() => {
     if (data?.[key]) {
@@ -177,27 +179,27 @@ export const useQueryPager = function (GraphQLQuery, options = {}) {
     setChooser(false);
     setPageValue('');
   }, []);
-  const onSelectAllServer = useCallback(() => {
-    getIDs({
-      variables: {
-        ...variableRef.current,
-        get_ids: true,
-      },
-    });
-  }, [getIDs]);
-  const { setSelected, ...selection } = useSelection(results, {
-    onSelectAllFilter: options.onSelectAllFilter,
-  });
-  useEffect(() => {
-    if (IDs) {
-      const [key] = Object.keys(IDs);
-      const next = {};
-      IDs[key].ids?.forEach((id) => {
-        next[id.toString()] = true;
-      });
-      setSelected(next);
-    }
-  }, [IDs, setSelected]);
+  // const onSelectAllServer = useCallback(() => {
+  //   getIDs({
+  //     variables: {
+  //       ...variableRef.current,
+  //       get_ids: true,
+  //     },
+  //   });
+  // }, [getIDs]);
+  // const { setSelected, ...selection } = useSelection(results, {
+  //   onSelectAllFilter: options.onSelectAllFilter,
+  // });
+  // useEffect(() => {
+  //   if (IDs) {
+  //     const [key] = Object.keys(IDs);
+  //     const next = {};
+  //     IDs[key].ids?.forEach((id) => {
+  //       next[id.toString()] = true;
+  //     });
+  //     setSelected(next);
+  //   }
+  // }, [IDs, setSelected]);
   return {
     results,
     loading,
@@ -206,7 +208,7 @@ export const useQueryPager = function (GraphQLQuery, options = {}) {
     refetch,
     onSortChange,
     sort,
-    onSelectAllServer,
+    // onSelectAllServer,
     Pager: ({ style, noModal }) => {
       return count <= query.limit && !options.pageSizes ? (
         <div />

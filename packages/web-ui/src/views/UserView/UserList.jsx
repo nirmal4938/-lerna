@@ -17,7 +17,7 @@ import { GetUsers } from '../../graphql/user/user.queries';
 import { Route } from 'react-router-dom';
 import { UserEdit } from './UserEdit';
 import { sortProps } from '../../hooks/useQueryPager/pagerUtils';
-import { useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/client';
 import { UpdateUser } from '../../graphql/user/user.mutation';
 
 export const UserList = () => {

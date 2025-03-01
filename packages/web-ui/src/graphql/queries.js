@@ -1,4 +1,6 @@
-import gql from "graphql-tag";
+// import { gql } from "graphql-tag";
+import { gql } from "@apollo/client";
+// import { gql } from 'apollo-server';
 
 export const GET_DEVICE_HISTORY = gql`
   query get_all_history(

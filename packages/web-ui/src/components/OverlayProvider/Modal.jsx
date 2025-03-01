@@ -7,6 +7,9 @@ import useOverlay from './hooks/useOverlay';
 export default function Modal({ children, style, title, onCancel }) {
   const { overlayRef, onMouseDown } = useOverlay({ onCancel });
 
+  useEffect(() => {
+    console.log('OverlayRef:', overlayRef.current);
+  }, [overlayRef]);
   const cancelRef = useRef(onCancel);
   useEffect(() => {
     cancelRef.current = onCancel;

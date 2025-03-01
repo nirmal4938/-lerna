@@ -80,8 +80,9 @@
   },
   "nav": {
     "dashboard": "Dashboard",
+    "questions": "Questions",
     "devicehistories": "Device Histories",
-    "devices": "devices",
+    "devices": "Devices",
     "tanks": "Tanks",
     "pumps": "Pumps",
     "phtds": "PHTDS",

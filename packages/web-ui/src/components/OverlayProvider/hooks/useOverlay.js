@@ -9,7 +9,7 @@ import {
       overlayRef,
     } = useContext(OverlayProviderContext);
     const [clickedInside, setClickedInside] = useState(false);
-  
+     console.log("useoverlay", overlayRef)
     const onMouseDown = useCallback((e) => {
       setClickedInside(true);
     }, []);

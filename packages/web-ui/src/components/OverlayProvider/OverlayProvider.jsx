@@ -5,6 +5,7 @@ import styled from 'styled-components';
 // import { setDragging } from '../../store/drag/drag.actions';
 import OverlayProviderContext from './context/OverlayProviderContext';
 import useOverlayProvider from './hooks/useOverlayProvider';
+import { setDragging } from '../../store/drag/drag.actions';
 
 const Container = styled.div`
   position: absolute;
@@ -45,7 +46,7 @@ export const OverlayProvider = ({ children }) => {
   const onDrop = useCallback((e) => {
     e.preventDefault();
     e.stopPropagation();
-    // dispatch(setDragging(false));
+    dispatch(setDragging(false));
   }, [dispatch]);
 
   const onDragOver = useCallback((e) => {

@@ -15,7 +15,7 @@ import { useTranslation } from 'react-i18next';
 import { useRouting } from '../../hooks/useRouting';
 import Toggle from 'ui-components/src/organisms/Toggle/Toggle';
 import ListFilters from './components/ListFilters';
-import { useQuery, useLazyQuery } from '@apollo/react-hooks';
+import { useQuery, useLazyQuery } from '@apollo/client';
 import { GET_DEVICE_HISTORY } from '../../graphql/queries';
 import { useQueryPager } from '../../hooks/useQueryPager/useQueryPager';
 import { sortProps } from '../../hooks/useQueryPager/pagerUtils';
@@ -31,7 +31,6 @@ export const DeviceHistoriesList = () => {
   const [filter, setFilter] = useState({
     // status: { $in: ['waiting-review', 'waiting-approval', 'active'] },
   });
-
   const { results, sort, onSortChange, Pager } = useQueryPager(
     GET_DEVICE_HISTORY,
     { limit: 5, where: filter }

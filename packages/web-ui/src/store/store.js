@@ -1,23 +1,16 @@
-import { createStore } from 'redux';
+import { combineReducers, createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from '@redux-devtools/extension';
+import auth from './auth';
+import {thunk} from 'redux-thunk';
+import drag from './drag';
 
-// Initial State
-const initialState = {
-  counter: 0,
-};
+const rootReducer = combineReducers({
+  auth, drag
+});
 
-// Reducer Function
-const rootReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      return { ...state, counter: state.counter + 1 };
-    case 'DECREMENT':
-      return { ...state, counter: state.counter - 1 };
-    default:
-      return state;
-  }
-};
-
-// Create Redux Store
-const store = createStore(rootReducer);
+const store = createStore(rootReducer,
+  composeWithDevTools(
+    applyMiddleware(thunk),
+  ));
 
 export default store;

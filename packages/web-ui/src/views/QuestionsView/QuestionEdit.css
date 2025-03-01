@@ -1,0 +1,81 @@
+.form-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .question-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-input,
+  .form-textarea,
+  .form-select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .form-textarea {
+    resize: vertical;
+  }
+  
+  .form-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .checkbox-container {
+    margin-left: 10px;
+  }
+  
+  .add-button,
+  .remove-button,
+  .submit-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .remove-button {
+    background-color: #dc3545;
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  .submit-button {
+    background-color: #28a745;
+    color: #fff;
+    width: 100%;
+  }
+  
+  .add-button:hover,
+  .remove-button:hover,
+  .submit-button:hover {
+    opacity: 0.9;
+  }
+  
