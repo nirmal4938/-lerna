@@ -44,7 +44,7 @@ const NoAuthorizationTemplateComponent = ({
         <FloatingCard style={cardStyle}>
           {!noLogo && (
             <CenteredHeader style={{ paddingBottom: '48px', paddingTop: '24px' }}>
-              <Logo color={theme.CTA_COLOR} />
+              {/* <Logo color={theme.CTA_COLOR} /> */}
             </CenteredHeader>
           )}
 
